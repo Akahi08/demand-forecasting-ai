@@ -235,7 +235,7 @@ Specifies files that should not be uploaded to GitHub.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Akahi08/Demand-forecasting-ai.git
+git clone https://github.com/Akahi08/demand-forecasting-ai.git
 ```
 
 Move into the project directory:
