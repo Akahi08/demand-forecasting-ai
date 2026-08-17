@@ -9,7 +9,7 @@ import joblib
 # =========================================================
 
 st.set_page_config(
-    page_title="Sales Forecasting AI",
+    page_title="Demand Forecasting AI",
     page_icon="📈",
     layout="wide"
 )
@@ -66,11 +66,11 @@ history = load_history()
 # HEADER
 # =========================================================
 
-st.title("📈 Sales Forecasting AI")
+st.title("📈 Demand Forecasting AI")
 
 st.write(
     """
-    Predict expected sales using historical sales patterns,
+    Predict expected demand using historical sales patterns,
     promotions, pricing and time-based features.
     """
 )
@@ -313,7 +313,7 @@ except ValueError as e:
 # PREDICTION
 # =========================================================
 
-if st.button("Predict Sales", type="primary"):
+if st.button("Predict demand", type="primary"):
 
     if feature_error:
         st.error(feature_error)
@@ -322,5 +322,5 @@ if st.button("Predict Sales", type="primary"):
         prediction = model.predict(input_data)[0]
 
         st.success(
-            f"Predicted Sales: **{prediction:.2f} units**"
+            f"Predicted Demand: **{prediction:.2f} units**"
         )
