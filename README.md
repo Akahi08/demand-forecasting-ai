@@ -1,8 +1,8 @@
 # 📈 Demand Forecasting AI
 
-A machine learning-powered web application built with **Python, Streamlit, Pandas, NumPy, and Scikit-learn** for predicting expected product sales based on historical sales patterns, pricing, promotions, and time-based features.
+A machine learning-powered web application built with **Python, Streamlit, Pandas, NumPy, and Scikit-learn** for predicting expected product demand based on historical sales patterns, pricing, promotions, and time-based features.
 
-The application provides an interactive interface where users can enter sales-related information and receive an estimated sales prediction.
+The application provides an interactive interface where users can enter sales-related information and receive an estimated demand prediction.
 
 ---
 
@@ -17,7 +17,7 @@ Accurate demand forecasting helps businesses make better decisions about:
 * 📊 Demand estimation
 * 📈 Business growth
 
-This project uses historical sales data and engineered time-series features to train a machine learning model capable of predicting future sales.
+This project uses historical sales data and engineered time-series features to train a machine learning model capable of predicting future demand.
 
 The trained model is integrated into a **Streamlit web application** for easy interaction and prediction.
 
@@ -180,13 +180,13 @@ This allows the model to learn how previous promotional activities may influence
 ## 📁 Project Structure
 
 ```text
-Demand-forecasting-ai/
+demand-forecasting-ai/
 │
 ├── app.py
 │
-├── demand_forecasting_model.pkl
+├── sales_forecasting_model.pkl
 │
-├── demand_model_features.pkl
+├── sales_model_features.pkl
 │
 ├── requirements.txt
 │
@@ -204,11 +204,11 @@ Demand-forecasting-ai/
 
 The Streamlit application responsible for collecting user inputs and generating predictions.
 
-**`demand_forecasting_model.pkl`**
+**`sales_forecasting_model.pkl`**
 
 The trained machine learning model saved using Joblib.
 
-**`demand_model_features.pkl`**
+**`sales_model_features.pkl`**
 
 Contains the exact feature names and order used during model training.
 
@@ -241,7 +241,7 @@ git clone https://github.com/Akahi08/Demand-forecasting-ai.git
 Move into the project directory:
 
 ```bash
-cd Demand-forecasting-ai
+cd demand-forecasting-ai
 ```
 
 ---
@@ -345,8 +345,8 @@ If a requested date is beyond this horizon, the application displays an error as
 The application loads two Joblib files:
 
 ```python
-demand_forecasting_model.pkl
-demand_model_features.pkl
+sales_forecasting_model.pkl
+sales_model_features.pkl
 ```
 
 Both model files must be present in the same directory as `app.py`.
@@ -385,8 +385,8 @@ Typical deployment requirements include:
 
 ```text
 app.py
-demand_forecasting_model.pkl
-demand_model_features.pkl
+sales_forecasting_model.pkl
+sales_model_features.pkl
 sales_history.csv.gz
 requirements.txt
 ```
