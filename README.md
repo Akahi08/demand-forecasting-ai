@@ -1,4 +1,4 @@
-# 📈 Sales Forecasting AI
+# 📈 Demand Forecasting AI
 
 A machine learning-powered web application built with **Python, Streamlit, Pandas, NumPy, and Scikit-learn** for predicting expected product sales based on historical sales patterns, pricing, promotions, and time-based features.
 
@@ -8,7 +8,7 @@ The application provides an interactive interface where users can enter sales-re
 
 ## 🚀 Project Overview
 
-Accurate sales forecasting helps businesses make better decisions about:
+Accurate demand forecasting helps businesses make better decisions about:
 
 * 📦 Inventory management
 * 💰 Pricing strategies
@@ -25,9 +25,9 @@ The trained model is integrated into a **Streamlit web application** for easy in
 
 ## ✨ Features
 
-### 📊 Sales Prediction
+### 📊 Demand Prediction
 
-The application predicts expected sales in units based on user-provided information.
+The application predicts expected demand in units based on user-provided information.
 
 ### 🏪 Store and Product Information
 
@@ -180,13 +180,13 @@ This allows the model to learn how previous promotional activities may influence
 ## 📁 Project Structure
 
 ```text
-sales-forecasting-ai/
+Demand-forecasting-ai/
 │
 ├── app.py
 │
-├── sales_forecasting_model.pkl
+├── demand_forecasting_model.pkl
 │
-├── sales_model_features.pkl
+├── demand_model_features.pkl
 │
 ├── requirements.txt
 │
@@ -195,7 +195,7 @@ sales-forecasting-ai/
 ├── .gitignore
 │
 └── notebooks/
-    └── sales_forecasting.ipynb
+    └── demand_forecasting.ipynb
 ```
 
 ### File Descriptions
@@ -204,11 +204,11 @@ sales-forecasting-ai/
 
 The Streamlit application responsible for collecting user inputs and generating predictions.
 
-**`sales_forecasting_model.pkl`**
+**`demand_forecasting_model.pkl`**
 
 The trained machine learning model saved using Joblib.
 
-**`sales_model_features.pkl`**
+**`demand_model_features.pkl`**
 
 Contains the exact feature names and order used during model training.
 
@@ -235,13 +235,13 @@ Specifies files that should not be uploaded to GitHub.
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Akahi08/sales-forecasting-ai.git
+git clone https://github.com/Akahi08/Demand-forecasting-ai.git
 ```
 
 Move into the project directory:
 
 ```bash
-cd sales-forecasting-ai
+cd Demand-forecasting-ai
 ```
 
 ---
@@ -309,7 +309,7 @@ Open the URL in your browser.
 4. Enter the current **Price**.
 5. Select whether the product is currently on promotion.
 6. Select the **Forecast Date**.
-7. Click **Predict Sales**.
+7. Click **Predict Demand**.
 
 The application automatically generates the required calendar, lag, rolling, price-change, and promotion-history features from the historical sales data.
 
@@ -318,7 +318,7 @@ For dates beyond the available historical dataset, the application generates for
 The application will display:
 
 ```text
-Predicted Sales: XX.XX units
+Predicted Demand: XX.XX units
 ```
 
 ---
@@ -345,8 +345,8 @@ If a requested date is beyond this horizon, the application displays an error as
 The application loads two Joblib files:
 
 ```python
-sales_forecasting_model.pkl
-sales_model_features.pkl
+demand_forecasting_model.pkl
+demand_model_features.pkl
 ```
 
 Both model files must be present in the same directory as `app.py`.
@@ -385,8 +385,8 @@ Typical deployment requirements include:
 
 ```text
 app.py
-sales_forecasting_model.pkl
-sales_model_features.pkl
+demand_forecasting_model.pkl
+demand_model_features.pkl
 sales_history.csv.gz
 requirements.txt
 ```
@@ -410,7 +410,7 @@ Validate Data
       ↓
 Generate Features
       ↓
-Predict Sales
+Predict Demand
       ↓
 Download Results
 ```
@@ -428,8 +428,8 @@ Allow users to generate forecasts for:
 
 Add charts showing:
 
-* Historical sales
-* Forecasted sales
+* Historical sales/demand
+* Forecasted demand
 * Sales trends
 * Promotion impact
 * Price impact
@@ -458,7 +458,7 @@ The current application has several limitations:
 * For future dates, intermediate unknown price and promotion values use the latest known values.
 * The application does not automatically retrieve real-time sales information.
 * Forecast accuracy depends on the performance of the trained model.
-* Predictions should be treated as estimates rather than guaranteed future sales.
+* Predictions should be treated as estimates rather than guaranteed future demands.
 
 ---
 
@@ -486,6 +486,6 @@ GitHub: `https://github.com/Akahi08`
 
 ## ⭐ Acknowledgement
 
-This project was developed as part of a practical machine learning workflow focused on applying predictive analytics to real-world sales forecasting problems.
+This project was developed as part of a practical machine learning workflow focused on applying predictive analytics to real-world demand forecasting problems.
 
 If you find this project useful, consider giving the repository a ⭐ on GitHub.
